@@ -1,1 +1,18 @@
-
+[OSEv3:children]
+masters
+nodes
+etcd
+[OSEv3:vars]
+ansible_ssh_user=root
+openshift_master_default_subdomain=apps.aio311.citrixns.com
+openshift_deployment_type=openshift-enterprise
+deployment_subtype=registry
+openshift_hosted_infra_selector=""
+oreg_auth_user=octmelab
+oreg_auth_password=PUT_PASSWORD_HERE
+[masters]
+10.217.101.181
+[etcd]
+10.217.101.181
+[nodes]
+10.217.101.181 openshift_node_group_name='node-config-all-in-one'
