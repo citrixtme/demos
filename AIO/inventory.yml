@@ -4,6 +4,7 @@ nodes
 etcd
 [OSEv3:vars]
 ansible_ssh_user=root
+##HOSTNAME OF MASTER
 openshift_master_default_subdomain="APPS.HOSTNAME.FQDN.COM"
 openshift_deployment_type=openshift-enterprise
 deployment_subtype=registry
@@ -11,8 +12,11 @@ openshift_hosted_infra_selector=""
 oreg_auth_user="OC_SUBSCRIPTION_NAME"
 oreg_auth_password=PUT_PASSWORD_HERE
 [masters]
+#IP ADDRESS OF AIO MASTER
 X.X.X.X
 [etcd]
+#IP ADDRESS OF AIO MASTER
 X.X.X.X
 [nodes]
+#IP ADDRESS OF AIO MASTER
 X.X.X.X openshift_node_group_name='node-config-all-in-one'
