@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: productpage-ingress
+  annotations:
+   ingress.citrix.com/insecure-port: "9080"
+   kubernetes.io/ingress.class: "cpx"
+spec:
+  rules:
+  - host: bookinfo.com
+    http:
+      paths:
+      - path:
+        backend:
+          serviceName: productpage-service
+          servicePort: 9080
