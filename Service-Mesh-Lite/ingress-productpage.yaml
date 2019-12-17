@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: productpage-ingress
+  annotations:
+   kubernetes.io/ingress.class: "bookinfo"
+   ingress.citrix.com/insecure-termination: "redirect"
+   ingress.citrix.com/frontend-ip: "10.217.101.182"
+spec:
+  rules:
+  - host: bookinfo.com
+    http:
+      paths:
+      - path:
+        backend:
+          serviceName: productpage-service
+          servicePort: 80
+
